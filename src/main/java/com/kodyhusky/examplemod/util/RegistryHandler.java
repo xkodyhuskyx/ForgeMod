@@ -3,9 +3,11 @@ package com.kodyhusky.examplemod.util;
 import com.kodyhusky.examplemod.ExampleMod;
 import com.kodyhusky.examplemod.armor.ModArmorMaterial;
 import com.kodyhusky.examplemod.blocks.BlockItemBase;
+import com.kodyhusky.examplemod.blocks.DJBlock;
 import com.kodyhusky.examplemod.blocks.RubyBlock;
 import com.kodyhusky.examplemod.blocks.RubyOre;
 import com.kodyhusky.examplemod.items.ItemBase;
+import com.kodyhusky.examplemod.items.PoisonApple;
 import com.kodyhusky.examplemod.tools.ModItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -27,6 +29,7 @@ public class RegistryHandler {
 
     // Items
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+    public static final RegistryObject<PoisonApple> POISON_APPLE = ITEMS.register("poison_apple", PoisonApple::new);
 
     // Tools (Attack Speed: 4 - 2.4 = 1.6)
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
@@ -38,7 +41,7 @@ public class RegistryHandler {
     public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", () ->
             new AxeItem(ModItemTier.RUBY, 5, -3.1F, new Item.Properties().group(ExampleMod.TAB)));
     public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
-            new HoeItem(ModItemTier.RUBY, 0,  -1.0F, new Item.Properties().group(ExampleMod.TAB)));
+            new HoeItem(ModItemTier.RUBY, -3,  -1.0F, new Item.Properties().group(ExampleMod.TAB)));
 
     // Armor
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
@@ -53,8 +56,10 @@ public class RegistryHandler {
     // Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
+    public static final RegistryObject<Block> DJ_BLOCK = BLOCKS.register("dj_block", DJBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(RUBY_BLOCK.get()));
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(RUBY_ORE.get()));
+    public static final RegistryObject<Item> DJ_BLOCK_ITEM = ITEMS.register("dj_block", () -> new BlockItemBase(RUBY_ORE.get()));
 }

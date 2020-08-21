@@ -11,5 +11,6 @@
   "item.examplemod.ruby_boots": "Ruby Boots",
   "block.examplemod.ruby_block": "Block of Ruby",
   "block.examplemod.ruby_ore": "Ruby Ore",
-  "itemGroup.exampleModTab": "Ruby Mod"
+  "itemGroup.exampleModTab": "Ruby Mod",
+  "item.examplemod.poison_apple": "Poisoned Apple"
 }
