@@ -3,7 +3,7 @@ package com.kodyhusky.examplemod.util;
 import com.kodyhusky.examplemod.ExampleMod;
 import com.kodyhusky.examplemod.armor.ModArmorMaterial;
 import com.kodyhusky.examplemod.blocks.BlockItemBase;
-import com.kodyhusky.examplemod.blocks.DJBlock;
+import com.kodyhusky.examplemod.blocks.Router;
 import com.kodyhusky.examplemod.blocks.RubyBlock;
 import com.kodyhusky.examplemod.blocks.RubyOre;
 import com.kodyhusky.examplemod.items.ItemBase;
@@ -56,10 +56,10 @@ public class RegistryHandler {
     // Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", RubyBlock::new);
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", RubyOre::new);
-    public static final RegistryObject<Block> DJ_BLOCK = BLOCKS.register("dj_block", DJBlock::new);
+    public static final RegistryObject<Block> ROUTER = BLOCKS.register("router", Router::new);
 
     // Block Items
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItemBase(RUBY_BLOCK.get()));
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(RUBY_ORE.get()));
-    public static final RegistryObject<Item> DJ_BLOCK_ITEM = ITEMS.register("dj_block", () -> new BlockItemBase(RUBY_ORE.get()));
+    public static final RegistryObject<Item> ROUTER_ITEM = ITEMS.register("router", () -> new BlockItemBase(ROUTER.get()));
 }

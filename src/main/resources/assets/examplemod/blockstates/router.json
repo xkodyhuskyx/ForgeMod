@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "examplemod:block/router" },
+    "facing=south": { "model": "examplemod:block/router", "y":  180},
+    "facing=west": { "model": "examplemod:block/router", "y":  270},
+    "facing=east": { "model": "examplemod:block/router", "y":  90}
+  }
+}
